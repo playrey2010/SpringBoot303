@@ -16,19 +16,19 @@ public class Course {
     private long id;
 
     @NotNull
-    @Size(min = 4)
+    @Size(min = 4, message = "Please provide the course title (at least 4 characters.)")
     private String title;
 
     @NotNull
-    @Size(min = 3)
+    @Size(min = 3, message = "Please provide Instructor's name (at least 3 characters.)")
     private String instructor;
 
     @NotNull
-    @Size(min = 10)
+    @Size(min = 10, message = "Please provide a brief description (at least 10 characters.)")
     private String description;
 
     @NotNull
-    @Min ( 3 )
+    @Min ( value = 3 , message = "Minimum is 3 credits. Non-credit courses not allowed.")
     private int credit;
 
     public long getId() {
